@@ -1,0 +1,8 @@
+{
+	"name": "jenwachter/wp-custom-post-status",
+    "description": "WordPress plugin that allows you to easily create custom post statuses for one or more custom post types.",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
