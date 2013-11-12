@@ -137,7 +137,7 @@ class CustomPostStatus
 			echo "
 			<script>
 			jQuery(document).ready(function ($){
-				$('.inline-edit-status select').append('<option value=\"ignore\">Ignore</option>');
+				$('.inline-edit-status select').append('<option value=\"{$this->post_status}\">{$this->action_label}</option>');
 			});
 			</script>
 			";
@@ -157,8 +157,8 @@ class CustomPostStatus
 
 		$status = get_query_var("post_status");
 
-		if ($status !== "ignore" && $post->post_status === "ignore"){
-			return array("Ignored");
+		if ($status !== $this->post_status && $post->post_status === $this->post_status){
+			return array($this->applied_label);
 		}
 
 	    return $states;
