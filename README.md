@@ -27,5 +27,5 @@ $args = array(
 	"label" => "Archive"
 );
 
-new CustomPostStatus("ignore", $post_types, $args);
+new CustomPostStatus("archive", $post_types, $args);
 ```
